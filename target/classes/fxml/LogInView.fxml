@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="766.0" styleClass="root" stylesheets="@../css-styles/LogIn.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="213.0" prefWidth="766.0" styleClass="upperAnchorPane" stylesheets="@../css-styles/LogIn.css" />
+      <AnchorPane layoutX="133.0" layoutY="71.0" prefHeight="660.0" prefWidth="501.0" stylesheets="@../css-styles/LogIn.css">
+         <children>
+            <ImageView fitHeight="224.0" fitWidth="262.0" layoutX="139.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/lock-open-blue.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="logInTextField" labelFloat="true" layoutX="147.0" layoutY="301.0" prefHeight="29.0" prefWidth="209.0" promptText="Login">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="logInButton" buttonType="RAISED" layoutX="177.0" layoutY="478.0" onAction="#logInButtonClicked" prefHeight="64.0" prefWidth="147.0" ripplerFill="#eb0b0b" styleClass="logInButton" stylesheets="@../css-styles/LogIn.css" text="Log in" />
+            <JFXPasswordField fx:id="passwordTextField" labelFloat="true" layoutX="147.0" layoutY="377.0" prefHeight="29.0" prefWidth="209.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

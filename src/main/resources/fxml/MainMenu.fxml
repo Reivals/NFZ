@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="813.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="813.0" fitWidth="1290.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/68981822-doctor-wallpapers.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="internalMedicineButton" buttonType="RAISED" layoutX="140.0" layoutY="189.0" onAction="#internalMedicineButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/8156-200.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="cardiologyButton" buttonType="RAISED" layoutX="447.0" layoutY="189.0" onAction="#cardiologyButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/22761-200.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="NeurologyButton" buttonType="RAISED" layoutX="755.0" layoutY="189.0" onAction="#NeurologyButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/medication-bottle-2-512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="phisiotherpathyButton" buttonType="RAISED" layoutX="140.0" layoutY="484.0" onAction="#phisiotherpathyButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/medication-drugs1-512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="databaseOfDoctorsButton" buttonType="RAISED" layoutX="447.0" layoutY="484.0" onAction="#databaseOfDoctorsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/medication-drugs1-512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="databaseOfPatientsButton" buttonType="RAISED" layoutX="755.0" layoutY="484.0" onAction="#databaseOfPatientsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/medication-drugs1-512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+.lowerAnchorPane{
+	-fx-background-color: white;
+	-fx-background-radius: 8px;
+	
+}
+.root{
+	-fx-background-color: #ffffff;
+}
+
+.upperAnchorPane{
+	
+	-fx-background-color: #3196DE;
+}
+
+.logInButton{
+	
+	-fx-background-color: #3196DE;
+	
+}
+
