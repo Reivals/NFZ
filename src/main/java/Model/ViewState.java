@@ -4,7 +4,7 @@ package Model;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
-import Controllers.ListOfPatientsInternalMedicineController;
+import Controllers.ListOfPatientsController;
 import Controllers.LogInController;
 import Controllers.MainMenuController;
 import JavaFXFunctionality.ContentOfPatientTableView;
@@ -23,7 +23,7 @@ public class ViewState {
 	private Stage stage;
 	private Parent logInView ;
 	private Parent mainMenuView ;
-	private Parent listOfPatientsMainMedicineView ;
+	private Parent listOfPatients ;
 
 	public ViewState(ContentOfPatientTableView patientTableViewModel, Stage stage) {
 		this.patientTableViewModel = patientTableViewModel ;
@@ -69,18 +69,18 @@ public class ViewState {
 	}
 
 	public void showListOfPatientsMainMedicineView() {
-		if(listOfPatientsMainMedicineView == null)
+		if(listOfPatients == null)
 		{
 			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ListOfPatientsInternalMedicineView.fxml"));
-				loader.setController(new ListOfPatientsInternalMedicineController(this));
-				listOfPatientsMainMedicineView=loader.load();
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ListOfPatientsView.fxml"));
+				loader.setController(new ListOfPatientsController(this));
+				listOfPatients=loader.load();
 			} catch (IOException exc) {
 				// fatal...
 				throw new UncheckedIOException(exc);
 			}
 		}
-		currentView.set(listOfPatientsMainMedicineView);
+		currentView.set(listOfPatients);
 		StageFunctionality.setStageProperties(stage);
 
 	}

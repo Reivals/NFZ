@@ -2,16 +2,11 @@ package Controllers;
 
 import java.io.IOException;
 import java.util.stream.Collectors;
-
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 
 import DAO.PatientDAO;
-import JavaFXFunctionality.ContentOfPatientTableView;
 import Model.Gender;
 import Model.Patient;
 import Model.ViewState;
@@ -21,14 +16,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
-public class ListOfPatientsInternalMedicineController {
+
+public class ListOfPatientsController {
 	IPatientDAO patientDAO = new PatientDAO();
 	private ViewState viewState;
 	@FXML
@@ -67,7 +61,7 @@ public class ListOfPatientsInternalMedicineController {
 
 
 
-	public ListOfPatientsInternalMedicineController(ViewState viewState) {
+	public ListOfPatientsController(ViewState viewState) {
 		this.viewState = viewState;
 	}
 
@@ -125,17 +119,16 @@ public class ListOfPatientsInternalMedicineController {
 	@FXML
 	public void initialize()
 	{
-		EventHandler<MouseEvent> itemSelectedEventHandler = new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				nameTextField.setText(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getName());
-				surnameTextField.setText(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getSurname());
-				dateOfBirth_DatePicker.setValue(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getDateOfBirth());
-				genderChoiceBox.setValue(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getGender());
-			}
-
+		// Filling all the Textfields in right anchorPane
+		EventHandler<MouseEvent> itemSelectedEventHandler = e ->{
+			nameTextField.setText(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getName());
+			surnameTextField.setText(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getSurname());
+			dateOfBirth_DatePicker.setValue(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getDateOfBirth());
+			genderChoiceBox.setValue(patientTableViewController.getTableView().getSelectionModel().getSelectedItem().getGender());
 		};
+		
+		
+		
 		ObservableList<Gender> observableGenderList = FXCollections.observableArrayList(Gender.MALE,Gender.FEMALE);
 		genderChoiceBox.setItems(observableGenderList);
 		patientTableViewController.getTableView().addEventHandler(MouseEvent.MOUSE_CLICKED,itemSelectedEventHandler);

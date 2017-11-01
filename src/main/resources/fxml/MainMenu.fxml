@@ -31,7 +31,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="NeurologyButton" buttonType="RAISED" layoutX="755.0" layoutY="189.0" onAction="#NeurologyButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+      <JFXButton fx:id="neurologyButton" buttonType="RAISED" layoutX="755.0" layoutY="189.0" onAction="#neurologyButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -49,7 +49,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="databaseOfDoctorsButton" buttonType="RAISED" layoutX="447.0" layoutY="484.0" onAction="#databaseOfDoctorsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+      <JFXButton fx:id="listOfDoctorsButton" buttonType="RAISED" layoutX="447.0" layoutY="484.0" onAction="#listOfDoctorsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -58,7 +58,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="databaseOfPatientsButton" buttonType="RAISED" layoutX="755.0" layoutY="484.0" onAction="#databaseOfPatientsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
+      <JFXButton fx:id="listOfPatientsButton" buttonType="RAISED" layoutX="755.0" layoutY="484.0" onAction="#listOfPatientsButtonClicked" opacity="0.75" prefHeight="218.0" prefWidth="249.0" styleClass="logInButton" text=" ">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>

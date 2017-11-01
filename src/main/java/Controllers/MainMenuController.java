@@ -4,14 +4,12 @@ import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 
-import JavaFXFunctionality.ContentOfPatientTableView;
 import Model.ViewState;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 public class MainMenuController {
 	
@@ -21,10 +19,7 @@ public class MainMenuController {
 			this.viewState = viewState ;
 		}
 
-		@FXML
-		void internalMedicineButtonClicked(ActionEvent event) throws IOException {
-			viewState.showListOfPatientsMainMedicineView();
-		}
+
 		
 		MainMenuController mainMenuController;
 	 	@FXML
@@ -34,51 +29,45 @@ public class MainMenuController {
 	    private JFXButton cardiologyButton;
 
 	    @FXML
-	    private JFXButton NeurologyButton;
+	    private JFXButton neurologyButton;
 
 	    @FXML
 	    private JFXButton phisiotherpathyButton;
 
 	    @FXML
-	    private JFXButton databaseOfDoctorsButton;
+	    private JFXButton listOfDoctorsButton;
 
 	    @FXML
-	    private JFXButton databaseOfPatientsButton;
+	    private JFXButton listOfPatientsButton;
+	    
+		@FXML
+		void internalMedicineButtonClicked() throws IOException {
+			
+		}
 	    
 
 	    @FXML
-	    void NeurologyButtonClicked(ActionEvent event) {
+	    void neurologyButtonClicked() throws IOException{
 
 	    }
 
 	    @FXML
-	    void cardiologyButtonClicked(ActionEvent event) {
+	    void cardiologyButtonClicked() throws IOException{
 
 	    }
 
 	    @FXML
-	    void databaseOfDoctorsButtonClicked(ActionEvent event) {
+	    void listOfDoctorsButtonClicked() throws IOException{
 
 	    }
 
 	    @FXML
-	    void databaseOfPatientsButtonClicked(ActionEvent event) {
-
+	    void listOfPatientsButtonClicked() throws IOException{
+	    	viewState.showListOfPatientsMainMedicineView();
 	    }
 
-/*	    @FXML
-	    void internalMedicineButtonClicked(ActionEvent event) throws IOException {
-	    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ListOfPatientsInternalMedicineView.fxml"));
-	    	Button button = (Button) event.getSource();
-	    	Scene scene = button.getScene();
-	    	Stage stage = (Stage) scene.getWindow();
-	    	loader.setController(new ListOfPatientsInternalMedicineController(patientTableViewModel,mainMenuController));
-	    	stage.setScene(new Scene(loader.load()));
-
-	    }*/
-
 	    @FXML
-	    void phisiotherpathyButtonClicked(ActionEvent event) {
+	    void phisiotherpathyButtonClicked() throws IOException{
 
 	    }
 
@@ -89,7 +78,64 @@ public class MainMenuController {
 		@FXML
 		public void initialize()
 		{
-
+			EventHandler<KeyEvent> keyEventHandlerENTERForAnyButtonInMainMenu = e ->
+			{
+				if(e.getCode() == KeyCode.ENTER && e.getSource() == internalMedicineButton )
+				{
+					try {
+						internalMedicineButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+				else if(e.getCode() == KeyCode.ENTER && e.getSource() == cardiologyButton )
+				{
+					try {
+						cardiologyButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+				else if(e.getCode() == KeyCode.ENTER && e.getSource() == neurologyButton )
+				{
+					try {
+						neurologyButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+				else if(e.getCode() == KeyCode.ENTER && e.getSource() == phisiotherpathyButton )
+				{
+					try {
+						phisiotherpathyButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+				else if(e.getCode() == KeyCode.ENTER && e.getSource() == listOfDoctorsButton )
+				{
+					try {
+						listOfDoctorsButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+				else if(e.getCode() == KeyCode.ENTER && e.getSource() == listOfPatientsButton )
+				{
+					try {
+						listOfPatientsButtonClicked();
+					} catch (IOException fatal) {
+						fatal.printStackTrace();
+					}
+				}
+					
+			};
+			internalMedicineButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
+			cardiologyButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
+			neurologyButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
+			phisiotherpathyButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
+			listOfDoctorsButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
+			listOfPatientsButton.setOnKeyPressed(keyEventHandlerENTERForAnyButtonInMainMenu);
 		}
 		
 

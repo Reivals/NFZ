@@ -1,17 +1,10 @@
 package Start;
-import Controllers.LogInController;
 import JavaFXFunctionality.ContentOfPatientTableView;
-import Model.Account;
-import Model.DoctorAccount;
 import Model.ViewState;
 import javafx.application.Application;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
+
 
 public class Main extends Application{
 	

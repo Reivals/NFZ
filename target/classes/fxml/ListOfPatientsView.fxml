@@ -10,13 +10,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1322.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="799.0" prefWidth="938.0" stylesheets="@../css-styles/LogIn.css" />
       <AnchorPane layoutX="936.0" layoutY="-1.0" prefHeight="806.0" prefWidth="385.0">
          <children>
-            <JFXTextField fx:id="searchTextField" layoutX="14.0" layoutY="44.0" onInputMethodTextChanged="#searchTextFieldChangedText" />
+            <JFXTextField fx:id="searchTextField" layoutX="14.0" layoutY="44.0" onInputMethodTextChanged="#searchTextFieldChangedText" promptText="Enter surname">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font></JFXTextField>
             <Hyperlink fx:id="deleteAllHyperText" layoutX="202.0" layoutY="44.0" onAction="#deleteAllHyperTextClicked" text="Delete All" />
             <JFXButton fx:id="goBacktoMainMenuButton" layoutX="276.0" layoutY="16.0" onAction="#goBacktoMainMenuButtonClicked" prefHeight="54.0" prefWidth="112.0" text="Go back ">
                <graphic>

@@ -23,12 +23,12 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="logInButton" buttonType="RAISED" layoutX="177.0" layoutY="478.0" onAction="#logInButtonClicked" prefHeight="64.0" prefWidth="147.0" ripplerFill="#eb0b0b" styleClass="logInButton" stylesheets="@../css-styles/LogIn.css" text="Log in" />
             <JFXPasswordField fx:id="passwordTextField" labelFloat="true" layoutX="147.0" layoutY="377.0" prefHeight="29.0" prefWidth="209.0" promptText="Password">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXPasswordField>
+            <JFXButton fx:id="logInButton" buttonType="RAISED" layoutX="177.0" layoutY="478.0" onAction="#logInButtonClicked" prefHeight="64.0" prefWidth="147.0" ripplerFill="#eb0b0b" styleClass="logInButton" stylesheets="@../css-styles/LogIn.css" text="Log in" />
          </children>
       </AnchorPane>
    </children>

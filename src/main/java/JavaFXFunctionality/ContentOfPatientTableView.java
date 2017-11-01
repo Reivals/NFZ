@@ -1,10 +1,7 @@
 package JavaFXFunctionality;
 
-import java.util.List;
-
 import DAO.PatientDAO;
 import Model.Patient;
-import interfaces.IPatientDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
